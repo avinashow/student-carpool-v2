@@ -2,8 +2,23 @@ const AccountMenu = (loggedUser = {}) => {
   const { username = undefined }= loggedUser;
   if (username) {
     return `
-      <div class="navbar-item">
-        ${username}
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          <span class="icon"><i class="fa fa-user-circle"></i></span><span> ${username}</span>
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            Profile
+          </a>
+          <a class="navbar-item">
+            My trips
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Logout
+          </a>
+        </div>
       </div>
     `;
   }

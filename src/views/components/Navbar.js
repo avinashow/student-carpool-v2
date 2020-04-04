@@ -1,8 +1,9 @@
 import AccountMenu from './AccountMenu.js';
+import RidesMenu from './RidesMenu.js';
 
 let Navbar = {
     render: async (loggedInUser) => {
-      const accountMenu = AccountMenu(loggedInUser);
+      /loggedInUser = {username:'avinash'};
         let view =  /*html*/`
              <nav class="navbar" role="navigation" aria-label="main navigation">
                 <div class="container">
@@ -24,12 +25,10 @@ let Navbar = {
                           <a class="navbar-item" href="/#/about">
                             About
                           </a>
-                          <a class="navbar-item" href="/#/secret">
-                            Secret
-                          </a>
+                          ${RidesMenu(loggedInUser)}
                         </div>
                         <div class="navbar-end">
-                          ${accountMenu}
+                          ${AccountMenu(loggedInUser)}
                         </div>
                     </div>
                 </div>
