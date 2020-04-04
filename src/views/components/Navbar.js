@@ -1,5 +1,9 @@
+import AccountMenu from './AccountMenu.js';
+import RidesMenu from './RidesMenu.js';
+
 let Navbar = {
-    render: async () => {
+    render: async (loggedInUser) => {
+      /loggedInUser = {username:'avinash'};
         let view =  /*html*/`
              <nav class="navbar" role="navigation" aria-label="main navigation">
                 <div class="container">
@@ -7,7 +11,7 @@ let Navbar = {
                         <a class="navbar-item" href="/#/">
                             <img class="logo" src="https://www.freelogodesign.org/file/app/client/thumb/a80be70d-b48c-471d-9c29-ff5ac5d6ab3d_200x200.png">
                         </a>
-                        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <a role="button" id="nav-toggle" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                             <span aria-hidden="true"></span>
                             <span aria-hidden="true"></span>
                             <span aria-hidden="true"></span>
@@ -15,27 +19,16 @@ let Navbar = {
                     </div>
                     <div id="navbarBasicExample" class="navbar-menu is-active" aria-expanded="false">
                         <div class="navbar-start">
-                            <a class="navbar-item" href="/#/">
-                                Home
-                            </a>
-                            <a class="navbar-item" href="/#/about">
-                                About
-                            </a>
-                            <a class="navbar-item" href="/#/secret">
-                                Secret
-                            </a>
+                          <a class="navbar-item" href="/#/">
+                            Home
+                          </a>
+                          <a class="navbar-item" href="/#/about">
+                            About
+                          </a>
+                          ${RidesMenu(loggedInUser)}
                         </div>
                         <div class="navbar-end">
-                            <div class="navbar-item">
-                                <div class="buttons">
-                                    <a class="button is-primary" href="/#/register">
-                                        <strong>Sign up</strong>
-                                    </a>
-                                    <a class="button is-light">
-                                        Log in
-                                    </a>
-                                </div>
-                            </div>
+                          ${AccountMenu(loggedInUser)}
                         </div>
                     </div>
                 </div>

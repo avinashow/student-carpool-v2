@@ -20,8 +20,8 @@
     "rollup": "^0.66.4"
   },
   "dependencies": {
-    "@babel/runtime": "^7.1.2",
-    "bulma": "^0.8.1",
+    "@babel/runtime": "7.9.2",
+    "bulma": "0.8.1",
     "services": "0.0.3"
   }
 }
