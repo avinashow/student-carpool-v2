@@ -3,20 +3,24 @@
 import './styles.css';
 import 'bulma';
 
-import Home         from './src/views/pages/Home.js'
-import About        from './src/views/pages/About.js'
-import Error404     from './src/views/pages/Error404.js'
-import PostShow     from './src/views/pages/PostShow.js'
+import Home         from './src/views/pages/Home.js';
+import About        from './src/views/pages/About.js';
+import Error404     from './src/views/pages/Error404.js';
+import Signin       from './src/views/pages/Signin.js';
+import Signout      from './src/views/pages/Signup.js';
+import PostShow     from './src/views/pages/PostShow.js';
 
-import Navbar       from './src/views/components/Navbar.js'
-import Bottombar    from './src/views/components/Bottombar.js' 
+import Navbar       from './src/views/components/Navbar.js';
+import Bottombar    from './src/views/components/Bottombar.js';
 
-import Utils        from './src/services/Utils.js'
+import Utils        from './src/services/Utils.js';
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
     '/'             : Home
     , '/about'      : About
+    , '/login'      : Signin
+    , '/register'   : Signout
     , '/p/:id'      : PostShow
 };
 
