@@ -14,6 +14,7 @@ import Navbar       from './src/views/components/Navbar.js';
 import Bottombar    from './src/views/components/Bottombar.js';
 
 import Utils        from './src/services/Utils.js';
+import SlideToggle        from './src/services/SlideToggle.js';
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
@@ -37,6 +38,9 @@ const router = async () => {
   footer.innerHTML = await Bottombar.render();
   await Bottombar.after_render();
 
+  document.getElementById("nav-toggle" ).addEventListener('click', function(e) {
+    SlideToggle( document.getElementById('navbarBasicExample') );
+  });
 
   // Get the parsed URl from the addressbar
   let request = Utils.parseRequestURL()
@@ -50,7 +54,9 @@ const router = async () => {
   content.innerHTML = await page.render();
   await page.after_render();
   
-}
+};
+
+ 
 
 // Listen on hash change:
 window.addEventListener('hashchange', router);

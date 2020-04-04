@@ -7,7 +7,7 @@ let Navbar = {
                         <a class="navbar-item" href="/#/">
                             <img class="logo" src="https://www.freelogodesign.org/file/app/client/thumb/a80be70d-b48c-471d-9c29-ff5ac5d6ab3d_200x200.png">
                         </a>
-                        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <a role="button" id="nav-toggle" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                             <span aria-hidden="true"></span>
                             <span aria-hidden="true"></span>
                             <span aria-hidden="true"></span>
