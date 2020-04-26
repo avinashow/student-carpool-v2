@@ -9,6 +9,7 @@ import Error404     from './src/views/pages/Error404.js';
 import Signin       from './src/views/pages/Signin.js';
 import Signout      from './src/views/pages/Signup.js';
 import PostShow     from './src/views/pages/PostShow.js';
+import RidesOffered from './src/views/pages/RidesOffered.js';
 
 import Navbar       from './src/views/components/Navbar.js';
 import Bottombar    from './src/views/components/Bottombar.js';
@@ -23,6 +24,7 @@ const routes = {
     , '/login'      : Signin
     , '/register'   : Signout
     , '/p/:id'      : PostShow
+    , '/ridesOffered' : RidesOffered
 };
 
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.
